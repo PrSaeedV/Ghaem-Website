@@ -78,11 +78,22 @@ ul {
 }
 
 /* Components */
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
 .header {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--white-color);
   color: var(--white-color);
+}
+
+.logo {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
 }
 
 .logo-sm {
@@ -289,10 +300,11 @@ ul {
 }
 .description {
   font-size: 14px;
+  width: 100%;
   color: #707070;
   text-align: center;
   margin: 10px 0;
-  white-space: wrap;
+  white-space: normal;
 }
 .button {
   border: none;
