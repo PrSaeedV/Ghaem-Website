@@ -82,6 +82,10 @@ ul {
 .bg-primary {
   background-color: var(--primary-color);
 }
+
+.bg-third-color {
+  background-color: var(--third-color);
+}
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -238,18 +242,16 @@ ul {
   white-space: nowrap;
   width: 100%;
   margin: 10px auto;
+  margin: 0;
 }
-.slide-content {
-  margin: 0 40px;
-  overflow: hidden;
-  border-radius: 25px;
-}
+
 .card {
   border-radius: 25px;
   background-color: #fff;
   display: inline-block;
   width: 300px;
   margin: 10px;
+  scroll-snap-align: center;
 }
 .image-content,
 .card-content {
@@ -274,10 +276,6 @@ ul {
   border-radius: 25px 25px 0 25px;
 }
 
-.overlay::after {
-  border-radius: 0 25px 0 0;
-  background-color: #fff;
-}
 .card-image {
   position: relative;
   height: 150px;
@@ -325,6 +323,7 @@ ul {
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   width: 10px; /* Set the width of the scrollbar */
+  height: 1px; 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -334,6 +333,13 @@ ul {
 
 ::-webkit-scrollbar-track {
   background-color: #f5f5f5; /* Set the color of the scrollbar track */
+}
+
+@media screen and (min-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 5px; /* Set the width of the scrollbar*/
+  } 
 }
 
 /* Contact Us */
